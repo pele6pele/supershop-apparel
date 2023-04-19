@@ -1,0 +1,145 @@
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo_shop {
+  text-decoration: none;
+  color: black;
+}
+
+.logo_shop div {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.logo_shop h1 {
+  font-family: 'Playfair Display';
+  font-size: 30px;
+}
+
+nav {
+  margin: 4em;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  gap: 4.1em;
+  margin: 0;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: black;
+  text-transform: uppercase;
+  font-size: 1.6rem;
+  position: relative;
+}
+
+nav ul li a.active:before {
+  position: absolute;
+  content: '';
+  width: 35%;
+  height: 1px;
+  border-bottom: 2px solid black;
+  bottom: -5px;
+}
+
+nav ul li a:before {
+  position: absolute;
+  content: '';
+  width: 0%;
+  height: 1px;
+  border-bottom: 2px solid rgb(125, 125, 125);
+  bottom: -5px;
+  transition: width 0.3s;
+}
+
+.navbar_smallscreen {
+  display: none;
+}
+
+.navbar_smallscreen_overlay {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  top: 0.5rem;
+  right: 0rem;
+  width: 50%;
+  height: 35vh;
+  background: rgb(255, 254, 254);
+  transition: 0.5s ease;
+  flex-direction: column;
+  z-index: 0;
+  border-radius: 30px 0;
+  box-shadow: 10px 20px 20px rgba(0, 0, 0, 0.4);
+  margin-top: 1rem;
+}
+
+.navbar_smallscreen_overlay ul {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+}
+
+.navbar_smallscreen_overlay .overlay_close {
+  font-size: 27px;
+  color: rgb(67, 65, 59);
+  cursor: pointer;
+  position: absolute;
+  top: 20px;
+  right: 20px;
+}
+
+.navbar_smallscreen_hamburger {
+  margin-right: 2rem;
+}
+
+@media screen and (max-width: 850px) {
+  header {
+    display: flex;
+    background-color: #282c34d7;
+    width: 100%;
+    height: 10vh;
+  }
+
+  .logo_shop {
+    display: none;
+  }
+
+  nav {
+    display: none;
+  }
+
+  .navbar_smallscreen {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+
+  .navbar_smallscreen h1 {
+    color: white;
+    margin-left: 2rem;
+    font-family: 'Playfair Display';
+    font-size: 30px;
+  }
+
+  .navbar_smallscreen_hamburger {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+
+  .navbar_smallscreen_list_smallscreen li {
+    margin: 0.5rem 0.5rem 0.5rem 0.5rem;
+    list-style: none;
+  }
+
+  .navbar_smallscreen_list_smallscreen a {
+    text-decoration: none;
+    color: black;
+  }
+}

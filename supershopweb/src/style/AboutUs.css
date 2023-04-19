@@ -1,0 +1,16 @@
+.About_us {
+  display: flex;
+  flex-direction: column;
+  font-size: 18px;
+
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+h1 {
+  font-size: 5.23rem;
+  font-family: 'Playfair Display';
+  font-weight: normal;
+  font-style: italic;
+  margin: 0;
+}
